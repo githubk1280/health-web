@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.james.mappers.MemberMapper">
+	<select id="getMemberById" resultType="com.james.models.Member">
+		SELECT * FROM MEMBER WHERE
+		id=#{id}
+	</select>
+	
+	<sql id="cat">
+		CONCAT(#{member.name.name},"|",#{map2.age})
+	</sql>
+	<insert id="batchAddMembers" parameterType="map">
+		INSERT INTO
+		MEMBER
+		VALUES
+		<foreach collection="list" item="member" separator=",">
+			(null,<include refid="cat"/>,#{map2.age},#{map2.birthday})
+		</foreach>
+	</insert>
+</mapper>
+
