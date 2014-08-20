@@ -13,7 +13,7 @@ http://www.springframework.org/schema/context
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-       <property name="basePackage" value="com.james.mappers" />
+       <property name="basePackage" value="com.health.mappers" />
    </bean>
 
 </beans>
