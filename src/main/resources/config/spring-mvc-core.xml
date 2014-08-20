@@ -18,8 +18,8 @@ http://www.springframework.org/schema/context
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<import resource="spring-db.xml"/>
-	<import resource="spring-mybatis.xml"/>
-	<import resource="spring-factorybean.xml"/>
+<!-- 	<import resource="spring-db.xml"/> -->
+<!-- 	<import resource="spring-mybatis.xml"/> -->
+<!-- 	<import resource="spring-factorybean.xml"/> -->
 	
 </beans>
